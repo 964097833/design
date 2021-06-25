@@ -1,0 +1,24 @@
+package com.qiaomu.example.factory.impl;
+
+import com.qiaomu.example.button.Button;
+import com.qiaomu.example.button.impl.WindowsButton;
+import com.qiaomu.example.checkbox.Checkbox;
+import com.qiaomu.example.checkbox.impl.WindowsCheckbox;
+import com.qiaomu.example.factory.GUIFactory;
+
+/**
+ * Each concrete factory extends basic factory and responsible for creating
+ * products of a single variety.
+ */
+public class WindowsFactory implements GUIFactory {
+
+    @Override
+    public Button createButton() {
+        return new WindowsButton();
+    }
+
+    @Override
+    public Checkbox createCheckbox() {
+        return new WindowsCheckbox();
+    }
+}
